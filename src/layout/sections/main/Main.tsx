@@ -4,6 +4,10 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
 import Tilt from 'react-parallax-tilt';
 import {S} from "./Main_Styles"
+import Typewriter from 'typewriter-effect';
+
+
+
 
 export const Main: React.FC = () => {
     return (
@@ -13,7 +17,18 @@ export const Main: React.FC = () => {
                     <div>
                         <S.SmallText>Hi There</S.SmallText>
                         <S.Name>I am <span>Anatolii Riabyi</span></S.Name>
-                        <S.MainTytle>A Web Developer. </S.MainTytle>
+                        {/*<S.MainTytle>A Web Developer. </S.MainTytle>*/}
+                        <S.MainTytle>
+                            <p>A Web Developer.</p>
+                            <Typewriter
+                                options={{
+                                    strings: ['A Web Developer.'],
+                                    autoStart: true,
+                                    loop: true,
+                                    delay: 50
+                                }}
+                            />
+                        </S.MainTytle>
                     </div>
                     <Tilt>
                         <S.PhotoWrapper>
